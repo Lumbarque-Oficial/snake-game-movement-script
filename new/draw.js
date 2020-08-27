@@ -13,14 +13,18 @@ var snake;
 
 (function setup() {
 	snake = new Snake();
+	enemy = new.Enemy();
 	fruit = new Fruit();
 	snake.draw();
+	enemy.draw();
 	fruit.pickLocation();
 
 	fruit.pickLocation();
 	window.setInterval(() => {
 		fruit.draw();
 		context.clearRect(0, 0, canvas.width, canvas.height);
+		enemy.update();
+		enemy.draw();
 		snake.update();
 		snake.draw();
 	},75);
