@@ -13,7 +13,7 @@ var snake;
 
 (function setup() {
 	snake = new Snake();
-	enemy = new.Enemy();
+	enemy = new Enemy();
 	fruit = new Fruit();
 	snake.draw();
 	enemy.draw();
@@ -24,8 +24,8 @@ var snake;
 		fruit.draw();
 		context.clearRect(0, 0, canvas.width, canvas.height);
 		enemy.update();
-		enemy.draw();
 		snake.update();
+		enemy.draw();
 		snake.draw();
 	},75);
 }());
