@@ -28,6 +28,7 @@ var snake;
 		enemy.draw();
 		snake.draw();
 		if (snake.x == enemy.x && snake.y == enemy.y) {
+			window.clearInterval();
 			location.reload();
 		}
 
