@@ -27,6 +27,10 @@ var snake;
 		snake.update();
 		enemy.draw();
 		snake.draw();
+		if (snake.x == enemy.x && snake.y == enemy.y) {
+			location.reload();
+		}
+
 	},75);
 }());
 window.addEventListener('keydown', ((evt) => {
